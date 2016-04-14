@@ -18,7 +18,11 @@ public class DayServiceImp implements DayService {
 
     @Override
     public List<Day> findAll() {
-        return dayRepository.findAll().stream().sorted((e1, e2) -> e1.getType().compareTo(e2.getType())).collect(Collectors.toList());
+        return dayRepository.findAll()
+                            .stream()
+                            .sorted((e1, e2) -> e1.getType()
+                                                  .compareTo(e2.getType()))
+                            .collect(Collectors.toList());
     }
 
     @Override

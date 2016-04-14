@@ -40,7 +40,7 @@ public class DefaultPage extends WebPage {
 
             @Override
             public void onSubmit() {
-                setResponsePage(stepManager.getNextVisiblePageAfterDefaultPage());
+                setResponsePage(stepManager.getStartPage());
             }
         };
         form.add(start);

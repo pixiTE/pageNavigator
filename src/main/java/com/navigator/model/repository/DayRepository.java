@@ -7,5 +7,8 @@ import com.navigator.model.entities.DayType;
 
 public interface DayRepository extends JpaRepository<Day, Long> {
 
-    public Day findByType(DayType daytype);
+    Day findByType(DayType daytype);
+
+    Day findFirstByVisible(Boolean visible);
+
 }
